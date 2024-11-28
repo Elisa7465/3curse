@@ -1,0 +1,117 @@
+body{
+    font-family: "Inter", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #EAECF0;
+    box-sizing: border-box;
+    height: 72px;
+    margin: 14px 160px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.logo-text{
+    font-size: 22px;
+    font-weight: 600;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 160px;
+
+}
+.button-wrapper{
+    display: flex;
+    gap:16px;
+    margin: 0;
+    
+}
+.black{
+    display: flex;
+    align-items: center;
+    background: #0D1421;
+    gap:10px;
+    border-radius: 8px;
+}
+.button-text{
+font-size: 14px;
+font-weight: 600;
+color: #FFFFFF;
+padding: 0;
+}
+.white{
+    background: #EAECF0;
+    border-radius: 8px;
+    border: 1px solid #EAECF0
+}
+.button-wghite-text{
+    font-size: 14px;
+font-weight: 600;
+    color: #354153;
+    padding: 0;
+}
+select{
+    border-radius: 8px;
+    border: 1px solid #EAECF0
+
+}
+option{
+    font-size: 16px;
+    font-weight: 500;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+
+}
+.top-wrapper, .button1-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 160px;
+    gap: 32px;
+
+
+}
+.item-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+gap: 16px;
+border: 0px 0px 1px 0px;
+opacity: 0px;
+border-bottom: 1px solid #EAECF0
+
+}
+.who{
+    display: flex;
+    justify-content: space-between;
+}
+.user{
+font-size: 16px;
+font-weight: 400;
+color: #667085;
+
+}
+.title-item{
+
+font-size: 24px;
+font-weight: 500;
+color: #0D1421;
+
+
+}
+.text-item{
+font-size: 18px;
+font-weight: 400;
+color: #354153;
+
+}

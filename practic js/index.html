@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK JS AI-PI-22</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f7f8fa;
+        }
+
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.5s ease, visibility 0.5s;
+        }
+
+        #loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 6px solid #ddd;
+            border-top: 6px solid #333;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .dropdown-button {
+            padding: 12px 20px;
+            font-size: 16px;
+            color: #333;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            min-width: 200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-top: 8px;
+            min-width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 10px;
+            width: 250px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body onload="loadData()">
+
+<div id="loader">
+    <div class="spinner"></div>
+</div> 
+
+<div class="dropdown">
+    <button class="dropdown-button" onclick="toggleDropdown()" id="dropdownButton">
+        <span id="selectedOption">По умолчанию</span>
+        <span>▼</span>
+    </button>
+    <div class="dropdown-content" id="dropdownMenu">
+        <a href="#" onclick="selectOption('По умолчанию')">По умолчанию</a>
+        <a href="#" onclick="selectOption('Сначала новые')">Сначала новые</a>
+        <a href="#" onclick="selectOption('Сначала старые')">Сначала старые</a>
+    </div>
+</div>
+
+<div class="cards" id="cardsContainer"></div>
+
+</body>
+<script src=".//script.js"></script>
+</html>
