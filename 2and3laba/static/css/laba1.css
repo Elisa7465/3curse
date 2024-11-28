@@ -4,6 +4,7 @@ body{
     flex-direction: column;
     height: 100%;
     min-height: 100vh;
+    margin: 0 10%;
 }
 header{
     display: flex;
@@ -12,25 +13,28 @@ header{
     border-bottom: 1px solid #EAECF0;
     box-sizing: border-box;
     height: 72px;
-    margin: 14px 160px;
+    margin: 14px 0;
 }
 .logo{
     display: flex;
     align-items: center;
     gap: 16px;
+
 }
 .logo-text{
     font-size: 22px;
     font-weight: 600;
 }
 main{
- margin: 0 160px;
+
+}
+.not-button{
+    margin-bottom: 20px;
 }
 .container{
-    display: flex;
-    justify-content: space-between;
-    gap:24px;
-    /* width: 1600px; */
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(270px, 1fr) );
+    gap:20px;
     width: 100%;
     
 }
@@ -41,11 +45,10 @@ main{
     border-radius: 8px;
     box-sizing: border-box;
     padding: 24px;
-    /* width: 382px;
-    height: 628px; */
-    
+    width: 100%;   
     justify-content: space-between;
 }
+
 .card-pro{
     display: flex;
     flex-direction: column;
@@ -53,12 +56,11 @@ main{
     border-radius: 8px;
     box-sizing: border-box;
     padding: 24px;
-    /* width: 382px;
-    height: 628px; */
+     width: 100%;
     justify-content: space-between;
     background: radial-gradient(130.07% 94.9% at 28.14% 5.1%, rgba(251, 213, 254, 0.8) 10.57%, #FEFFD9 63.61%, #FFFFFF 100%) 
-
 }
+
 .tarif{
     font-size: 22px;
     font-weight: 500;
@@ -136,10 +138,10 @@ button{
 }
 footer{
     box-sizing: border-box;
-    padding: 2% 160px;
+    padding: 2% 0;
     margin-top: auto;
-
 }
+
 .footer-text{
     font-size: 16px;
     font-weight: 400;
@@ -151,7 +153,9 @@ footer{
 .content{
     display: flex;
     justify-content: space-between;
-    margin: 32px 160px 18px 160px;
+    margin: 32px 0 18px 0;
+    flex-wrap: wrap;
+    gap:24px;
 }
 .content-label{
     margin: 0;
@@ -214,4 +218,32 @@ footer{
     background-color: #F2F4F7;
     
 }
+@keyframes rotateLogo {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+.logo svg{
+    animation: rotateLogo 5s linear infinite; 
+}
+.logo-text:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
+}
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.card-pro, .card-standart{
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slideIn 0.7s ease-out forwards;
+}
+
+
 
