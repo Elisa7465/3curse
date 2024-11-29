@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Standard Plan",
+        "description": "Learn the product and use it for a small team",
+        "price": "$1,2",
+        "services": ["Service 1", "Service 2", "Service 3", "Service 4"]
+    },
+    {
+        "title": "Pro Plan",
+        "description": "Learn the product and use it for a small team",
+        "price": "$2,2",
+        "services": ["Service 1", "Service 2", "Service 3", "Service 4", "Service 5"]
+    },
+    {
+        "title": "Premium Tariff",
+        "description": "Learn the product and use it for a small team",
+        "price": "$4,7",
+        "services": ["Service 1", "Service 2", "Service 3", "Service 4", "Service 5", "Service 6"]
+    },
+    {
+        "title": "Corporate",
+        "description": "Learn the product and use it for a small team",
+        "price": "$10",
+        "services": ["Service 1", "Service 2", "Service 3", "Service 4", "Service 5", "Service 6", "Service 7"]
+    }
+]

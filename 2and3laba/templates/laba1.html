@@ -9,16 +9,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
+<body onload="showLoader()">
+    <div id="spinner-container" class="spinner-container">
+        <div class="spinner"></div>
+    </div>
     <header>
-
+      
         <div class="logo">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M19.2 0H12.8V8.27451L6.94904 2.42355L2.42355 6.94902L8.27453 12.8H0V19.2H8.27451L2.42355 25.0509L6.94904 29.5765L12.8 23.7254V32H19.2V23.7254L25.051 29.5765L29.5765 25.051L23.7254 19.2H32V12.8H23.7254L29.5765 6.94902L25.051 2.42354L19.2 8.27451V0Z" fill="#0D1421"/>
             </svg>
             <p class="logo-text">
                 Вариант 10
-            </p>
+            </p> 
+
+            <div class="switch-container">
+              <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider"></span>
+              </label>
+          </div>
+
+
+            
         </div>
         <div class="profile">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,138 +56,15 @@
                 <div class="dropdown-item"><input type="checkbox" checked> <span class="menu-text">Услуга 3</span><br></div>  
                 <div class="dropdown-item"><input type="checkbox" checked> <span class="menu-text">Услуга 4</span><br></div>  
                 <div class="dropdown-item"><input type="checkbox" checked> <span class="menu-text">Услуга 5</span><br></div>  
-                <div class="dropdown-item"><input type="checkbox" checked> <span class="menu-text">Услуга 6</span><br></div>  
+                <div class="dropdown-item"><input type="checkbox" checked> <span class="menu-text">Услуга 6</span><br></div>
+                <div class="dropdown-item"><input type="checkbox" checked> <span class="menu-text">Услуга 7</span><br></div>  
             </div>
         </div>
     </div>
     <main>
         <div class="container">
-            <div class="card-standart">
-                <div class="not-button">
-                <p class="tarif">Тариф Стандарт</p>
-                <p class="info">Изучайте продукт и используйте его для небольшой команды</p>
-                <div class="price">
-                    <p class="price-price">1 200 ₽</p>
-                    <p class="price-month">/в месяц</p>
-                </div>
-                <div class="line"></div>
-                        <ul class="list">
-                            <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg><p class="name-li">Услуга 1</p></li>
-                            <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg><p class="name-li">Услуга 2</p></li>
-                            <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg><p class="name-li">Услуга 3</p></li>
-                            <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg><p class="name-li">Услуга 4</p></li>                                
-                        </ul>
-                    </div>
-                <button>Выбирите этот тариф</button>
-
-                
-
-            </div>
-            <div class="card-pro">
-                <div class="not-button">
-                <p class="tarif">Тариф Про</p>
-                <p class="info">Изучайте продукт и используйте его для небольшой команды</p>
-                <div class="price">
-                    <p class="price-price">2 200 ₽</p>
-                    <p class="price-month">/в месяц</p>
-                </div>
-                <div class="line"></div>
-                        <ul class="list">
-                            <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg><p class="name-li">Услуга 1</p></li>
-                            <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg><p class="name-li">Услуга 2</p></li>
-                            <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg><p class="name-li">Услуга 3</p></li>
-                            <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg><p class="name-li">Услуга 4</p></li>  
-                            <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg><p class="name-li">Услуга 5</p></li>                                
-                        </ul>
-                    </div>
-                <button>Выбирите этот тариф</button>
-                </div>
-                <div class="card-standart">
-                    <div class="not-button">
-                    <p class="tarif">Тариф Премиум</p>
-                    <p class="info">Изучайте продукт и используйте его для небольшой команды</p>
-                    <div class="price">
-                        <p class="price-price">4 700 ₽</p>
-                        <p class="price-month">/в месяц</p>
-                    </div>
-                    <div class="line"></div>
-                            <ul class="list">
-                                <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg><p class="name-li">Услуга 1</p></li>
-                                <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg><p class="name-li">Услуга 2</p></li>
-                                <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg><p class="name-li">Услуга 3</p></li>
-                                <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg><p class="name-li">Услуга 4</p></li> 
-                                <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg><p class="name-li">Услуга 5</p></li>  
-                                <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg><p class="name-li">Услуга 6</p></li>                                 
-                            </ul>
-                        </div>
-                    <button>Выбирите этот тариф</button>
-                </div>
-                <div class="card-standart">
-                    <div class="not-button">
-                    <p class="tarif">Корпоративный</p>
-                    <p class="info">Изучайте продукт и используйте его для небольшой команды</p>
-                    <div class="price">
-                        <p class="price-price">10 000 ₽</p>
-                        <p class="price-month">/в месяц</p>
-                    </div>
-                    <div class="line"></div>
-                            <ul class="list">
-                                <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg><p class="name-li">Услуга 1</p></li>
-                                <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg><p class="name-li">Услуга 2</p></li>
-                                <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg><p class="name-li">Услуга 3</p></li>
-                                <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg><p class="name-li">Услуга 4</p></li> 
-                                <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg><p class="name-li">Услуга 5</p></li>  
-                                <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg><p class="name-li">Услуга 6</p></li>     
-                                <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="#354153" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg><p class="name-li">Услуга 7</p></li>                              
-                            </ul>
-                        </div>
-                    <button>Выбирите этот тариф</button>
-                </div>
-            </div>
+            
+         </div>
 
     </main>
     <footer>
@@ -182,7 +72,7 @@
     </footer>
     
 </body>
-<script src=".//script.js"></script>
+<script src="../templates/laba1.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
       var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
