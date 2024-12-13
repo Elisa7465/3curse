@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  header{
+    background-color: #1B54DD;
+    text-align: center;
+    padding: 20px;
+
+}
+.logo-text-wrapper-header {
+    text-align: center; 
+}
+.logo-text-header-right,.logo-text-header-left {
+    font-family: Impact, sans-serif; 
+    font-size: 31px; 
+    font-weight: 300; 
+    text-transform: uppercase; /* Заглавные буквы */
+    line-height: 1; 
+    color: white; 
+    margin: 0;  
+}
+.logo-text-header-mini {
+    font-family: Arial, sans-serif;
+    font-size: 10px; 
+    font-weight: normal; 
+    color: white; 
+    margin: 0;
+    text-transform: uppercase; 
+    letter-spacing: 2px;
+    
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.logo-text-header-left{
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slideIn 0.7s ease-out forwards;
+}
+.logo-text-header-right{
+    transform: translateX(100%);
+    opacity: 0;
+    animation: slideIn 0.7s ease-out forwards;
+
+}
+
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .seasons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .season-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .season-button:hover {
+    background-color: #ddd;
+  }
+  
+  .episodes {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+  }
+  
+  .season-episodes {
+    display: none;
+    flex-shrink: 0;
+    gap: 10px;
+  }
+  
+  .season-episodes.active {
+    display: flex;
+  }
+  
+  .episode {
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .episode:hover {
+    transform: scale(1.1);
+  }
+  
+  .episode img {
+    width: 150px;
+    height: 100px;
+    height: auto;
+  }
+  .episode p{
+    margin: 0;
+  }
+  .player-container {
+    margin-top: 30px;
+    display: none;
+    text-align: center;
+  }
+  
+  #player iframe {
+    border: none;
+    max-width: 100%;
+  }
+  

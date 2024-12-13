@@ -12,16 +12,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const dropdownMenu = document.querySelector(".dropdown-menu");
     const dropdownLabel = document.querySelector(".dropdown-label");
 
-    let currentLanguage = "ru"; // Текущий язык, по умолчанию русский
-    let cardData = []; // Данные карточек для текущего языка
+    let currentLanguage = "ru";
+    let cardData = []; 
 
-    // Тексты для dropdown в зависимости от языка
+    
     const dropdownTexts = {
         ru: ["Услуга 1", "Услуга 2", "Услуга 3", "Услуга 4", "Услуга 5", "Услуга 6", "Услуга 7"],
         en: ["Service 1", "Service 2", "Service 3", "Service 4", "Service 5", "Service 6", "Service 7"]
     };
 
-    // Тексты для кнопок в зависимости от языка
+   
     const buttonTexts = {
         ru: "Выбрать этот тариф",
         en: "Choose this plan"
@@ -31,14 +31,14 @@ document.addEventListener("DOMContentLoaded", () => {
         en: "/month"
     };
 
-    // Функция загрузки данных из JSON
+   
     async function loadCardData(language) {
         const response = await fetch(`cardData_${language}.json`);
         const data = await response.json();
         return data;
     }
 
-    // Функция рендеринга карточек
+   
     function renderCards(data) {
         container.innerHTML = ""; 
         data.forEach((card) => {
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Функция рендеринга иконки для списка услуг
+   
     function renderServiceIcon() {
         return `
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,9 +78,9 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     }
 
-    // Функция обновления dropdown-menu в зависимости от языка
+   
     function updateDropdownMenu() {
-        dropdownMenu.innerHTML = ""; // Очищаем меню
+        dropdownMenu.innerHTML = ""; 
         dropdownTexts[currentLanguage].forEach((text) => {
             const item = document.createElement("div");
             item.className = "dropdown-item";
@@ -88,14 +88,14 @@ document.addEventListener("DOMContentLoaded", () => {
             dropdownMenu.appendChild(item);
         });
 
-        // Назначаем слушатели чекбоксам
+       
         const checkboxes = dropdownMenu.querySelectorAll("input[type='checkbox']");
         checkboxes.forEach((checkbox) => {
             checkbox.addEventListener("change", filterCards);
         });
     }
 
-    // Функция фильтрации карточек по выбранным услугам
+    
     function filterCards() {
         const checkboxes = dropdownMenu.querySelectorAll("input[type='checkbox']");
         const selectedServices = Array.from(checkboxes)
@@ -103,34 +103,34 @@ document.addEventListener("DOMContentLoaded", () => {
             .map((checkbox) => checkbox.nextElementSibling.textContent.trim());
 
         if (selectedServices.length === 0) {
-            // Если нет выбранных услуг, показываем все карточки
+            
             renderCards(cardData);
         } else {
-            // Фильтруем карточки, чтобы услуги соответствовали выбранным
+           
             const filteredCards = cardData.filter((card) =>
                 selectedServices.every((service) => card.services.includes(service))
             );
-            renderCards(filteredCards); // Рендерим отфильтрованные карточки
+            renderCards(filteredCards); 
         }
     }
 
-    // Функция загрузки данных, обновления языка и перерисовки
+    
     async function updateLanguage() {
         
-        cardData = await loadCardData(currentLanguage); // Загружаем данные карточек
-        renderCards(cardData); // Отображаем карточки
-        updateDropdownMenu(); // Обновляем dropdown-menu
+        cardData = await loadCardData(currentLanguage); 
+        renderCards(cardData); 
+        updateDropdownMenu(); 
     }
 
 
 
-    // Слушатель переключения языка
+    
     languageSwitch.addEventListener("change", () => {
-        currentLanguage = languageSwitch.checked ? "en" : "ru"; // Изменение языка
+        currentLanguage = languageSwitch.checked ? "en" : "ru"; 
         dropdownLabel.textContent = currentLanguage === "en" ? "Choose a plan" : "Подобрать тариф";
         updateLanguage();
     });
 
-    // Начальная загрузка
+   
     updateLanguage();
 });

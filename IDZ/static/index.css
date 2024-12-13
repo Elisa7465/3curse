@@ -1,0 +1,199 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    
+    
+}
+header{
+    background-color: #1B54DD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px;
+    padding: 30px 40px;
+    text-align: center;
+
+}
+
+
+
+.logo-text-wrapper-header {
+    text-align: center; 
+}
+.logo-text-header-right,.logo-text-header-left {
+    font-family: Impact, sans-serif; 
+    font-size: 31px; 
+    font-weight: 300; 
+    text-transform: uppercase; /* Заглавные буквы */
+    line-height: 1; 
+    color: white; 
+    margin: 0;  
+}
+.logo-text-header-mini {
+    font-family: Arial, sans-serif;
+    font-size: 10px; 
+    font-weight: normal; 
+    color: white; 
+    margin: 0;
+    text-transform: uppercase; 
+    letter-spacing: 2px;
+    
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.logo-text-header-left{
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slideIn 0.7s ease-out forwards;
+}
+.logo-text-header-right{
+    transform: translateX(100%);
+    opacity: 0;
+    animation: slideIn 0.7s ease-out forwards;
+
+}
+
+
+.header-photo{
+    width: 100%; 
+    max-width: 800px; 
+    aspect-ratio: 16 / 9;
+    object-fit: cover; 
+}
+.header-title{
+    font-size: 35px;
+    font-weight: 600;
+    color:white;
+}
+.header-fact{
+    font-size: 22px;
+    font-weight: 600;
+    color:white;
+}
+.header-text{
+    font-size: 13px;
+    font-weight: 300;
+    color:white;
+}
+.header-button{
+    border-radius: 2px;
+    border:none;
+    background-color:white;
+    min-width: 100px;   
+}
+.button-text{
+    color:#1A2028;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px;
+    margin: 0;
+}
+
+
+main{
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+.wrapper-item{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+.item{
+    display: flex;
+    width: 100%;
+    text-wrap: wrap;
+    gap:3%;
+    
+   
+}
+.wrapper-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:20px;
+    
+
+}
+@media screen and (max-width: 450px){
+    .item{     
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    .wrapper-text{
+        max-width: 240px;
+        gap:10px;
+    }
+}
+.item-title{
+    font-size: 22px;
+    font-weight: 600;
+    color:#141A26;
+}
+.item-text{
+    font-size: 13px;
+    font-weight: 300;
+    color:#262626;
+}
+.link{
+    color:#1B54DD;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.button-blue{
+    border-radius: 2px;
+    border:none;
+    background-color:#1B54DD;
+    min-width: 100px;
+}
+.button-blue-text{
+    color:white;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px;
+    margin: 0;
+
+}
+
+
+footer{
+    background-color: #E8E8E8;
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:15px;
+    text-align: center;
+}
+.wrapper-instagramm{
+    display: flex;
+    gap:30px;
+}
+.wrapper-footer{
+    max-width: 215px;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+
+}
+.gmail{
+    font-size: 14px;
+    font-weight: 300;
+    color:#262626;
+}
+.discript{
+    font-size: 10px;
+    font-weight: 300;
+    color:#262626;
+}
